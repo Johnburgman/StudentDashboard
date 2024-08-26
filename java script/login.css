@@ -1,0 +1,58 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  /* Login Page Styling */
+  .login-container {
+    background-color: #ffffff; /* Background color for the login container */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    margin: 100px auto; /* Centered in the viewport */
+  }
+  
+  .login-container h2 {
+    margin-bottom: 20px;
+    color: #4b49ac; /* Primary color for headings */
+  }
+  
+  .login-container label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #0c007d; /* Secondary color for labels */
+  }
+  
+  .login-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #3f0097; /* Border color */
+    border-radius: 5px;
+  }
+  
+  .login-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #0c007d; /* Background color for the button */
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .login-container button:hover {
+    background-color: #3f0097; /* Highlight color on hover */
+  }
+  
+  /* Error Message */
+  #errorMessage {
+    color: red; /* Error message color */
+    margin-top: 10px;
+  }
+  

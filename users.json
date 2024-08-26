@@ -1,0 +1,21 @@
+[
+  {
+    "firstName": "Johnburgman",
+    "lastName": "Odongo",
+    "middleName": "Onyango",
+    "email": "johnburgmanbabuh@gmail.com",
+    "password": "1234"
+  },
+  {
+    "email": "johnburgmanbabu@gmail.com",
+    "password": "$2b$10$tIAnvLKefWcTtFqqfjI5mujHDBucU7t.K9p3fXU8am1KpXyrKPsu2"
+  },
+  {
+    "email": "sam@gmail.com",
+    "password": "$2b$10$ZhsmgRSKQ7iy2PRdBsz6O.lxw5/IBsRaJ9V12fcQd36t8KHex183m"
+  },
+  {
+    "email": "sam@gmail.com",
+    "password": "$2b$10$CQnFpD/xMadslHHY/R/pBuFRkEgC4NYKu0tw4/rzYllfgPBo0YkD2"
+  }
+]

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/responsive.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        /* Add inline styles for the dialog */
+        .dialog {
+            display: none;
+            position: absolute;
+            top: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            max-width: 600px;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+        .dialog.active {
+            display: block;
+        }
+        .dialog h3 {
+            margin-top: 0;
+            color: #333;
+        }
+        .dialog .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #f44336;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+        /* Footer styling */
+        .footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 0.875rem;
+            box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- for header part -->
+    <header>
+        <div class="logosec">
+            <h3>
+                <div class="logo">Nextstep Platform</div>
+            </h3>
+            <img src="./logo_1.png" class="logoN" id="main" alt="logo">
+        </div>
+
+        <div class="searchbar">
+            <input type="text" placeholder="Search">
+            <div class="searchbtn">
+                <img src="./magnifying-glass_10975953.png" alt="Search" class="logoN">
+            </div>
+        </div>
+
+        <div class="message">
+            <div class="circle"></div>
+            <img src="./chat-bubble_11302401.png" class="logoN" onclick="showDialog('notifications-dialog')" alt="Chat">
+            <div class="dp" id="dropdown-trigger">
+                <img src="./unfriend_12225864.png" class="logoN" alt="Profile">
+                <!-- Dropdown Menu -->
+                <div class="dropdown-menu" id="dropdown-menu">
+                    <a href="https://scholar.google.com/" target="_blank">Articles</a>
+                    <a href="institution.html">Institution</a>
+                    <a href="./information student/index.html">Profile</a>
+                    <a href="login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <div class="navcontainer">
+            <nav class="nav">
+                <div class="nav-upper-options">
+                    <!-- Dashboard heading -->
+                    <div>
+                        <h3>Dashboard</h3>
+                    </div>
+
+                    <div class="option2 nav-option">
+                        <a href="https://scholar.google.com/" target="_blank">
+                            <img src="./document_7953245.png" alt="article_png">
+                            <h3>Articles</h3>
+                        </a>
+                    </div>
+
+                    <div class="nav-option option4">
+                        <a href="institution.html" id="institution-dropdown-trigger">
+                            <img src="./city-hall_13794943.png" alt="institution">
+                            <h3>Institution</h3>
+                        </a>
+                    </div>
+
+                    <div class="nav-option option5">
+                        <a href="./information student/index.html">
+                            <img src="./feedback_7755930.png" class="nav-img" alt="blog">
+                            <h3>Profile</h3>
+                        </a>
+                    </div>
+
+                    <div class="nav-option logout">
+                        <a href="login.html">
+                            <img src="./switch_11302228.png" class="nav-img" alt="logout">
+                            <h3>Logout</h3>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="main">
+            <div class="report-body">
+                <div class="report-topic-heading">
+                    <a href="./Student Result Management web Application/index.html">
+                        <img src="./report_7273348.png" alt="report" class="report">
+                    </a>
+                    <a href="./Student Grades/index.html">
+                        <img src="./scoreboard_17402487.png" alt="score" class="score">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add your JavaScript code here -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const dropdownTrigger = document.getElementById('dropdown-trigger');
+            const dropdownMenu = document.getElementById('dropdown-menu');
+
+            dropdownTrigger.addEventListener('click', function () {
+                dropdownMenu.classList.toggle('show');
+            });
+
+            // Optional: Close dropdown if clicking outside
+            document.addEventListener('click', function (event) {
+                if (!dropdownTrigger.contains(event.target) && !dropdownMenu.contains(event.target)) {
+                    dropdownMenu.classList.remove('show');
+                }
+            });
+        });
+
+        function showDialog(dialogId) {
+            document.getElementById(dialogId).classList.add('active');
+        }
+
+        function closeDialog(dialogId) {
+            document.getElementById(dialogId).classList.remove('active');
+        }
+    </script>
+
+    <!-- Dialog for Notifications -->
+    <div id="notifications-dialog" class="dialog">
+        <button class="close-btn" onclick="closeDialog('notifications-dialog')">×</button>
+        <h3>Notifications</h3>
+        <p>You have 0 Messages.</p>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Nextstep. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

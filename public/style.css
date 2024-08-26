@@ -1,0 +1,314 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* CSS Variables */
+:root {
+  --background-color1: #fafaff;
+  --background-color2: #ffffff;
+  --background-color3: #ededed;
+  --background-color4: #cad7fda4;
+  --primary-color: #4b49ac;
+  --secondary-color: #0c007d;
+  --border-color: #3f0097;
+  --highlight-color1: #3f0097;
+  --highlight-color2: #5500cb;
+}
+
+/* Body Styling */
+body {
+  background-color: var(--background-color4);
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Login Page Styling */
+.login-container {
+  background-color: var(--background-color2);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+  margin: 100px auto; /* Centered in the viewport */
+}
+
+.login-container h2 {
+  margin-bottom: 20px;
+  color: var(--primary-color);
+}
+
+.login-container label {
+  display: block;
+  margin: 10px 0 5px;
+  color: var(--secondary-color);
+}
+
+.login-container input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+}
+
+.login-container button {
+  width: 100%;
+  padding: 10px;
+  background-color: var(--secondary-color);
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-container button:hover {
+  background-color: var(--highlight-color1);
+}
+
+/* Error Message Styling */
+#errorMessage {
+  color: red;
+}
+
+/* Header */
+header {
+  height: 70px;
+  width: 100vw;
+  padding: 0 30px;
+  background-color: var(--background-color1);
+  position: fixed;
+  z-index: 100;
+  box-shadow: 1px 1px 15px rgba(161, 182, 253, 0.825);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+img {
+  width: 26px; /* Reduced size for better balance */
+}
+
+.logoN {
+  font-size: 24px; /* Reduced font size */
+  font-weight: 600;
+  color: rgb(47, 141, 70);
+}
+
+/* Flexbox Layout */
+.searchbar, .message, .logosec {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.searchbar2 {
+  display: none;
+}
+
+.logosec {
+  gap: 40px; /* Reduced gap for a more compact layout */
+}
+
+/* Search Bar */
+.searchbar input {
+  width: 250px; /* Adjusted width */
+  height: 26px; /* Reduced height */
+  border-radius: 50px 0 0 50px;
+  background-color: var(--background-color3);
+  padding: 0 15px;
+  font-size: 14px;
+  outline: none;
+  border: none;
+}
+
+/* Search Button */
+.searchbtn {
+  width: 30px; /* Adjusted size */
+  height: 26px; /* Adjusted size */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 50px 50px 0;
+  background-color: var(--secondary-color);
+  cursor: pointer;
+}
+
+/* Message Section */
+.message {
+  gap: 10px; /* Reduced gap for better spacing */
+  position: relative;
+  cursor: pointer;
+}
+
+.circle {
+  height: 7px;
+  width: 7px;
+  position: absolute;
+  background-color: #7bfa88;
+  border-radius: 50%;
+  left: 19px;
+  top: 8px;
+}
+
+/* Main Container */
+.main-container {
+  display: flex;
+  width: 200vw;
+  position: relative;
+  top: 80px;
+  z-index: 1;
+}
+
+/* Main Content Area */
+.main {
+  height: calc(100vh - 70px);
+  width: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding: 40px 20px; /* Reduced padding */
+}
+
+/* Custom Scrollbar */
+.main::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(to bottom, rgb(0, 0, 85), rgb(0, 0, 50));
+}
+
+.main::-webkit-scrollbar {
+  width: 5px;
+}
+
+.main::-webkit-scrollbar-track {
+  background-color: #9e9e9eb2;
+}
+
+/* Sidebar */
+.nav {
+  min-height: 91vh;
+  width: 280px; /* Reduced width for better balance */
+  background-color: var(--background-color2);
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-shadow: 1px 1px 10px rgba(198, 189, 248, 0.825);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 0 20px 10px; /* Adjusted padding */
+}
+
+/* Sidebar Container */
+.navcontainer {
+  height: calc(100vh - 70px);
+  width: 400px; /* Adjusted width */
+  position: relative;
+  overflow-x: hidden;
+  transition: all 0.5s ease-in-out;
+}
+
+.navcontainer::-webkit-scrollbar {
+  display: none;
+}
+
+.navclose {
+  width: 80px;
+}
+
+/* Navigation Options */
+.nav-option {
+  width: 220px; /* Adjusted width */
+  height: 75px; /* Adjusted height */
+  display: flex;
+  align-items: center;
+  padding: 9 25px; /* Adjusted padding */
+  gap: 5px;
+  transition: all 0.1s ease-in-out;
+}
+
+.nav-option:hover {
+  border-left: 5px solid #a2a2a2;
+  background-color: #dadada;
+  cursor: pointer;
+}
+
+.nav-img {
+  height: 25px; /* Adjusted icon size */
+}
+
+/* Upper Sidebar Options */
+.nav-upper-options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px; /* Reduced gap */
+}
+
+/* Active Option */
+.option1 {
+  border-left: 5px solid #010058af;
+  background-color: var(--border-color);
+  color: white;
+  cursor: pointer;
+}
+
+.option1:hover {
+  border-left: 5px solid #010058af;
+  background-color: var(--border-color);
+}
+
+/* Report, Score, Info Sections */
+.report, .score, .info {
+  margin-top: 60px; /* Reduced top margin */
+  width: 180px; /* Adjusted width */
+  position: relative;
+  display: inline-flex;
+  justify-content: space-around;
+  margin-right: 30px; /* Adjusted margin */
+}
+
+/* Navigation Option Links */
+.nav-option a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+}
+
+/* Navigation Option Icons */
+.nav-option img {
+  margin-right: 10px; /* Reduced margin */
+  width: 24px; /* Adjusted icon size */
+}
+
+/* Hide the dropdown menu by default */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  z-index: 1000;
+}
+
+/* Show the dropdown menu when the .show class is added */
+.dropdown-menu.show {
+  display: block;
+}
+
+/* Optional: Style the dropdown menu links */
+.dropdown-menu a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f1f1f1;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Result Management web Application</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>STUDENT RREPORT</h1>
+        <div class="ftab">
+     <table cellspacing="5" >
+        <caption><b>Input Marks</b></caption>
+        
+        <tr>
+            <th rowspan="2">Name</th>
+            <th colspan="4">Score</th>
+ 
+        </tr>
+        <tr>
+            <th>Biology</th>
+            <th>English</th>
+            <th>Math</th>
+            <th>C Programming</th>
+        </tr>
+        <tr>
+            <td><input type="text" id="aname"></td>
+            <td><input type="text" id="am"></td>
+            <td><input type="text" id="aj"></td>
+            <td><input type="text" id="ad"></td>
+            <td><input type="text" id="an"></td>
+        </tr>
+        <tr>
+            <th colspan="5" height="30">
+            <input type="submit" value="Add To Table" onclick="Sub()"></th>
+        </tr>    
+     </table>
+    </div>
+    <br>
+     <div class="stab">
+        <table  cellspacing="5"
+           height="100" width="500" cellpadding="5" id="TableScore">
+            <caption><b>Student Data</b></caption>
+            <tr>
+            <th width="180">Name</th>
+            <th width="90">Total</th>
+            <th width="90">Average</th>
+            <th width="90">Pass Or Fail</th>
+            </tr>
+            <tr></tr>
+         
+        </table>
+        <div class="button-container">
+        <button type="button" id="back">Back to home</button>
+        </div>
+
+    </div>
+</div>
+    
+             
+
+
+    <script src="javascript/script.js"></script>
+</body>
+</html>

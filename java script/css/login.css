@@ -1,0 +1,107 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Body Styling */
+body {
+    background-color: #f4f4f9; /* Light gray background for the whole page */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Header Styling */
+header {
+    width: 100%;
+    background-color: #4b49ac; /* Primary color */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+/* Page Container */
+.page-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin-top: 80px; /* Space for the header */
+}
+
+/* Login Page Styling */
+.login-container {
+    background-color: #ffffff; /* Background color for the login container */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+    color: #4b49ac; /* Primary color for headings */
+}
+
+.login-container label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #0c007d; /* Secondary color for labels */
+}
+
+.login-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #3f0097; /* Border color */
+    border-radius: 5px;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #00647d; /* Background color for the button */
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-container button:hover {
+    background-color: #710097; /* Highlight color on hover */
+}
+
+/* Links Styling */
+.links {
+    margin-top: 15px;
+}
+
+.links a {
+    color: #4b49ac; /* Primary color for links */
+    text-decoration: none;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+.links p {
+    margin-top: 10px;
+}
+
+/* Error Message */
+#errorMessage {
+    color: red; /* Error message color */
+    margin-top: 10px;
+}

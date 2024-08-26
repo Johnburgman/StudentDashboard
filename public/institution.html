@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Institution</title>
+    <link rel="stylesheet" href="institution.css">
+    <style>
+        /* Add inline styles for the dialog */
+        .dialog {
+            display: none;
+            position: absolute;
+            top: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            max-width: 600px;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+        .dialog.active {
+            display: block;
+        }
+        .dialog h2 {
+            margin-top: 0;
+            color: #333;
+        }
+        .dialog .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #3636f4;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <header>
+            <h1>Institution Information</h1>
+        </header>
+        <div class="institution-container">
+            <a href="#" class="institution-item" onclick="showDialog('departments-dialog')">Departments Overview</a>
+            <a href="./information student/index.html" class="institution-item">Course Enrollment</a>
+            <a href="#" class="institution-item" onclick="showDialog('faculty-dialog')">Faculty Management</a>
+        </div>
+        <a href="javascript:history.back()" class="back-button">Back</a>
+    </div>
+
+    <!-- Dialog for Departments Overview -->
+    <div id="departments-dialog" class="dialog">
+        <button class="close-btn" onclick="closeDialog('departments-dialog')">×</button>
+        <h2>Departments Overview</h2>
+        <p><strong>Information Technology:</strong> Learn about the latest in IT, including programming, networks, and databases.</p>
+        <p><strong>Music:</strong> Explore courses in music theory, composition, and performance.</p>
+        <p><strong>Science:</strong> Delve into various scientific disciplines such as physics, chemistry, and biology.</p>
+        <p><strong>Language:</strong> Study different languages and enhance your linguistic skills.</p>
+    </div>
+
+    <!-- Dialog for Faculty Management -->
+    <div id="faculty-dialog" class="dialog">
+        <button class="close-btn" onclick="closeDialog('faculty-dialog')">×</button>
+        <h2>Faculty Management</h2>
+        <h3>Faculty Directory</h3>
+        <p><strong>Dr. Jane Smith</strong></p>
+        <ul>
+            <li><strong>Title:</strong> Associate Professor</li>
+            <li><strong>Department:</strong> Computer Science</li>
+            <li><strong>Email:</strong> jane.smith@university.edu</li>
+            <li><strong>Phone:</strong> (123) 456-7890</li>
+            <li><strong>Office Hours:</strong> Mon/Wed 2:00 PM - 4:00 PM</li>
+        </ul>
+        <h3>Faculty Details</h3>
+        <p><strong>Dr. Jane Smith</strong></p>
+        <ul>
+            <li><strong>Biography:</strong> Dr. Jane Smith is an Associate Professor in the Computer Science department, specializing in Artificial Intelligence and Machine Learning.</li>
+            <li><strong>Research Interests:</strong> AI, Natural Language Processing, Computer Vision</li>
+            <li><strong>Publications:</strong>
+                <ul>
+                    <li>"Advanced Machine Learning Techniques," Journal of AI Research, 2023</li>
+                    <li>"Natural Language Processing for Beginners," Computer Science Review, 2022</li>
+                </ul>
+            </li>
+            <li><strong>Courses Taught:</strong> Introduction to AI, Machine Learning, Data Science</li>
+            <li><strong>Awards and Recognitions:</strong> Best Paper Award at AI Conference 2022</li>
+        </ul>
+        <h3>Faculty Scheduling</h3>
+        <ul>
+            <li><strong>Class Schedule:</strong>
+                <ul>
+                    <li>AI 101: Mon/Wed 10:00 AM - 11:30 AM</li>
+                    <li>ML 201: Tue/Thu 1:00 PM - 2:30 PM</li>
+                </ul>
+            </li>
+        </ul>
+        
+    </div>
+
+    <script>
+        function showDialog(dialogId) {
+            document.getElementById(dialogId).classList.add('active');
+        }
+
+        function closeDialog(dialogId) {
+            document.getElementById(dialogId).classList.remove('active');
+        }
+    </script>
+</body>
+</html>
